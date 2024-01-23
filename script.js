@@ -1,3 +1,5 @@
+// Javascript for Ducker game
+
 // Select the relevant elements from the HTML
 const grid = document.querySelector('.grid');
 const timer = document.querySelector('.timer');

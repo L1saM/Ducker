@@ -1,15 +1,5 @@
 /*
-  black: rgb(0, 23, 50); #001732;
-  orange: rgb(241, 117, 78); #f1754e;
-  lightgreen: rgba(78, 241, 187, 0.7); #4ef1bbb3;
-  bg-color: rgb(216, 238, 232);  #d8eee8;
-  bg-dark-color: rgb(203, 224, 221); #cbe0dd;
-  clicked-cell: rgb(157, 197, 199); #9dc5c7;
-  transparent red: rgba(241, 117, 78, 0.7); #f1754eb3;
-
-
-	font-family: 'Darker Grotesque', sans-serif;
-	font-family: 'Press Start 2P', cursive;
+Stylesheet for Ducker
 */
 
 /* # Generic */
@@ -36,6 +26,15 @@ body {
 
 h1 {
   font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-bottom: 20px;
+}
+
+h2{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 20px;
+padding-bottom: 20px;
+
 }
 
 .score {
@@ -56,6 +55,7 @@ h1 {
   height: calc(48px * 9); /*👈 change multiplier based on game column count */
   display: flex;
   flex-wrap: wrap;
+  outline: 5px solid rgb(15, 136, 29);
 }
 
 .cell {
@@ -73,14 +73,14 @@ h1 {
 
 .river {
   outline: none;
-  background-color: lightblue;
+  background-color: rgb(113, 201, 230);
 }
 
 .road {
   outline: none;
   border-top: 1px dashed white;
   border-bottom: 1px dashed white;
-  background-color: gray;
+  background-color: rgb(90, 88, 88);
 }
 
 .car {

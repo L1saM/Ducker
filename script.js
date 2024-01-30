@@ -7,7 +7,7 @@ const endGameScreen = document.querySelector('.end-game-screen');
 const endGameText = document.querySelector('.end-game-text');
 const playAgainBtn = document.querySelector('.play-again');
 
-// Nested Array
+// Nested Array for game elements
 const gridMatrix = [
   ['', '', '', '', '', '', '', '', ''],
   [
@@ -36,6 +36,7 @@ const riverRows = [1, 2];
 const roadRows = [4, 5, 6];
 const duckPosition = { x: 4, y: 8 };
 let contentBeforeDuck = '';
+// Game time set
 let time = 15;
 
 function drawGrid() {

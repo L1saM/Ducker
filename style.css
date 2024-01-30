@@ -2,8 +2,6 @@
 Stylesheet for Ducker
 */
 
-/* # Generic */
-
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +14,7 @@ body {
   line-height: 1;
   color: rgb(0, 23, 50);
   background-color: rgb(216, 238, 232);
+  
 }
 
 .game-container {
@@ -24,19 +23,33 @@ body {
 
 /* # Game Panel */
 
+
 h1 {
-  font-size: 40px;
+  font-size: 60px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding-bottom: 20px;
   color: rgb(14, 239, 100);
-  text-shadow:2px, 2px, black;
+  text-shadow: 2px 2px #555353;
+  text-align: center  ;
+  background-image: url('./images/bg2.jpg');
+  background-position: stretch;
+  padding-top: 10px;
+  outline: 3px solid rgb(14, 239, 100);
   
 }
 
 h2{
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-size: 20px;
-padding-bottom: 20px;
+padding-bottom: 10px;
+outline: 3px solid rgb(14, 239, 100);
+background-color: black;
+color: rgb(237, 244, 244);
+padding-top: 10px;
+padding-left: 10px;
+padding-right: 10px;
+text-shadow: 1px 1px #05f354;
+text-align: center;
 
 }
 
@@ -44,6 +57,12 @@ padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   font-size: 32px;
+  padding-bottom: 10px;
+  background-image: url('./images/bg2.jpg');
+  color: rgb(237, 244, 244);
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: 3px solid rgb(14, 239, 100);
 }
 
 /* # Game grid */
@@ -51,6 +70,7 @@ padding-bottom: 20px;
 .game-board {
   border: 2px solid rgb(0, 23, 50);
   position: relative;
+  
 }
 
 .grid {
@@ -59,6 +79,7 @@ padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   outline: 5px solid rgb(14, 239, 100);
+  background-image: url('./images/bg3.jpg');
 }
 
 .cell {
@@ -76,31 +97,33 @@ padding-bottom: 20px;
 
 .river {
   outline: none;
-  background-color: rgb(113, 201, 230);
+  background-color: rgb(47, 134, 163);
+  background-image: url('./images/riverw.jpg');
 }
 
 .road {
   outline: none;
   border-top: 1px dashed white;
   border-bottom: 1px dashed white;
-  background-color: rgb(90, 88, 88);
+  background-color: rgb(63, 58, 58);
+  background-image: url('./images/road1.jpg');
 }
+
+/* Moving images */
 
 .car {
   background-image: url('./images/car.png');
 }
 
 .bus {
-  background-image: url('./images/bus.png');
+  background-image: url('./images/car-2.png');
 }
 
 .wood {
   background-image: url('./images/wood.png');
 }
 
-/* 
-This will work in a normal IDE / code editor but StackBlitz does not support GIF filetypes.
-See the 2 styles below for an alternative approach using animations.
+/* Duck walking animation */
 
 .duck {
 	background-image: url('./images/duck-walk.gif');
@@ -108,49 +131,6 @@ See the 2 styles below for an alternative approach using animations.
 
 .river.duck {
 	background-image: url('./images/duck-walk.gif'), url('images/wood.png');
-}
-*/
-
-/* Alternative approach to animate the duck - for StackBlitz only */
-.duck {
-  animation: changeDuckImage 0.6s step-start infinite;
-}
-@keyframes changeDuckImage {
-  0% {
-    background-image: url('./images/duck-walk/duck-walk-1.png');
-  }
-  25% {
-    background-image: url('./images/duck-walk/duck-walk-2.png');
-  }
-  75% {
-    background-image: url('./images/duck-walk/duck-walk-3.png');
-  }
-  100% {
-    background-image: url('./images/duck-walk/duck-walk-4.png');
-  }
-}
-
-/* Alternative approach to animate the duck when on the river - for StackBlitz only */
-.river.duck {
-  animation: changeRiverDuckImage 0.6s step-start infinite;
-}
-@keyframes changeRiverDuckImage {
-  0% {
-    background-image: url('./images/duck-walk/duck-walk-1.png'),
-      url('./images/wood.png');
-  }
-  25% {
-    background-image: url('./images/duck-walk/duck-walk-2.png'),
-      url('./images/wood.png');
-  }
-  75% {
-    background-image: url('./images/duck-walk/duck-walk-3.png'),
-      url('./images/wood.png');
-  }
-  100% {
-    background-image: url('./images/duck-walk/duck-walk-4.png'),
-      url('./images/wood.png');
-  }
 }
 
 .time-up,
@@ -184,14 +164,16 @@ See the 2 styles below for an alternative approach using animations.
   gap: 16px;
 }
 
+/* Winner screen */
 .win {
-  background-color: rgba(78, 241, 187, 0.7);
+  background-color: rgba(77, 238, 184, 0.7);
 }
 
 .end-game-text {
   font-size: 48px;
   font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
+  border-radius: 8px;
 }
 
 .btn {
@@ -201,10 +183,11 @@ See the 2 styles below for an alternative approach using animations.
   cursor: pointer;
   text-transform: uppercase;
   border: 2px solid rgb(14, 239, 100);
+  border-radius: 8px;
 }
 
 .btn:hover {
-  background-color: rgb(10, 194, 80);
+  background-color: rgb(7, 112, 47);
 }
 
 /* # Utilities */

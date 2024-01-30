@@ -28,6 +28,9 @@ h1 {
   font-size: 40px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding-bottom: 20px;
+  color: rgb(14, 239, 100);
+  text-shadow:2px, 2px, black;
+  
 }
 
 h2{
@@ -55,7 +58,7 @@ padding-bottom: 20px;
   height: calc(48px * 9); /*👈 change multiplier based on game column count */
   display: flex;
   flex-wrap: wrap;
-  outline: 5px solid rgb(15, 136, 29);
+  outline: 5px solid rgb(14, 239, 100);
 }
 
 .cell {
@@ -195,14 +198,13 @@ See the 2 styles below for an alternative approach using animations.
   font-size: 24px;
   font-family: 'Darker Grotesque', sans-serif;
   padding: 4px 20px 8px 20px;
-  /* width: 50%; */
   cursor: pointer;
   text-transform: uppercase;
-  border: 2px solid rgb(0, 23, 50);
+  border: 2px solid rgb(14, 239, 100);
 }
 
 .btn:hover {
-  background-color: rgb(203, 224, 221);
+  background-color: rgb(10, 194, 80);
 }
 
 /* # Utilities */
